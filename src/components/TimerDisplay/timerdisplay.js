@@ -5,6 +5,7 @@ import 'react-circular-progressbar/dist/styles.css'
 import useSound from 'use-sound'
 import startSfx from '../../sounds/startTimer.mp3'
 import pauseSfx from '../../sounds/pauseTimer.mp3'
+import AudioButton from "../../my_components/audio";
 
 const TimerDisplay = ({ timerMode,
                         percentage,
@@ -13,17 +14,20 @@ const TimerDisplay = ({ timerMode,
                         setIsActive,
                         buttonText,
                         setButtonText,
-                        volume,
-                        setVolume
+                        selectedAudio,
+                        setIsAudioPlaying,
+                        isAudioPlaying
                       }) => {
+
+
 
   const [play] = useSound(startSfx, {
                                       interrupt: true,
-                                      volume: volume,
+                                      volume: 0,
                                     })
   const [pause] = useSound(pauseSfx, {
                                       interupt: true,
-                                      volume: volume,
+                                      volume: 0,
                                     })
 
   const handleClick = (event) => {
@@ -79,8 +83,14 @@ const TimerDisplay = ({ timerMode,
             trailColor: 'none',
           })}>
           
-          <MuteToggle volume = {volume}
-                      setVolume = {setVolume} />
+          {/*<MuteToggle volume = {volume}*/}
+          {/*            setVolume = {setVolume} />*/}
+
+
+            <div key={selectedAudio}>
+                <AudioButton selectedOption={selectedAudio} isAudioPlaying={isAudioPlaying} />
+            </div>
+
           <button className="display__start-pause" onClick={handleClick}>{buttonText}</button>
         </CircularProgressbarWithChildren>
       </div>

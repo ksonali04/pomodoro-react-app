@@ -10,10 +10,9 @@ const Controls = ({ timerMode,
                     longLength,
                     setIsActive,
                     setButtonText,
-                    volume
                   }) => {
 
-  const [playSfx] = useSound(clickSfx, { volume: volume });
+  const [playSfx] = useSound(clickSfx, { volume: 0 });
 
   const handleModeChange = (event) => {
     setTimerMode(event.target.id)

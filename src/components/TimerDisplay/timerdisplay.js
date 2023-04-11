@@ -15,8 +15,7 @@ const TimerDisplay = ({ timerMode,
                         buttonText,
                         setButtonText,
                         selectedAudio,
-                        setIsAudioPlaying,
-                        isAudioPlaying
+                        timerOver
                       }) => {
 
 
@@ -88,7 +87,7 @@ const TimerDisplay = ({ timerMode,
 
 
             <div key={selectedAudio}>
-                <AudioButton selectedOption={selectedAudio} isAudioPlaying={isAudioPlaying} />
+                <AudioButton selectedOption={selectedAudio} timerOver={timerOver} />
             </div>
 
           <button className="display__start-pause" onClick={handleClick}>{buttonText}</button>

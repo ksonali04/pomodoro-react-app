@@ -22,7 +22,7 @@ const Pomodoro = () => {
     const [timesUp] = useSound(timesUpSfx, {
         volume: 1,
     })
-    const [isAudioPlaying, setIsAudioPlaying] = useState(true);
+    const [timerOver, setTimerOver] = useState(false)
 
     //Audio Options
     const [selectedAudio, setSelectedAudio] = useState('tq32Q5cKhkQ');
@@ -30,7 +30,8 @@ const Pomodoro = () => {
 
     useEffect(() => {
         console.log("updated-selectedAudio:", selectedAudio);
-    }, [selectedAudio]);
+        console.log("updated-timerOver:", timerOver);
+    }, [selectedAudio, timerOver]);
 
 
     useEffect(() => {
@@ -41,10 +42,10 @@ const Pomodoro = () => {
 
             if (secondsLeft === 0) {
                 clearInterval(interval)
+                setTimerOver(true)
                 setIsActive(false)
                 setButtonText('')
                 timesUp()
-                setIsAudioPlaying(false);
             }
 
             return () => clearInterval(interval)
@@ -104,8 +105,7 @@ const Pomodoro = () => {
                 buttonText={buttonText}
                 setButtonText={setButtonText}
                 selectedAudio={selectedAudio}
-                setIsAudioPlaying={setIsAudioPlaying}
-                isAudioPlaying={isAudioPlaying}
+                timerOver = {timerOver}
             />
             <Button type="settings" toggleVisibility={toggleSettingsVisibility}/>
             <Settings visible={settingsVisible}

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import YouTube from 'react-youtube';
+import React, {useEffect, useState} from 'react';
+import YouTube, {YouTubePlayer} from 'react-youtube';
 
-const AudioButton = ({selectedOption, isAudioPlaying}) => {
+const AudioButton = ({selectedOption, timerOver}) => {
     const [player, setPlayer] = useState(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
@@ -9,7 +9,7 @@ const AudioButton = ({selectedOption, isAudioPlaying}) => {
 
     const handlePlayButtonClick = () => {
         if (player && selectedOption) {
-            if (isPlaying || !isAudioPlaying) {
+            if (isPlaying ) {
                 player.pauseVideo();
             } else {
                 player.playVideo();
@@ -17,6 +17,15 @@ const AudioButton = ({selectedOption, isAudioPlaying}) => {
             setIsPlaying(!isPlaying);
         }
     };
+
+    useEffect(() => {
+        if (player && selectedOption) {
+            if (timerOver) {
+                player.pauseVideo();
+            }
+            setIsPlaying(!isPlaying);
+        }
+    }, [timerOver]);
 
     // const handlePlayButtonClick = () => {
     //     if (player && selectedOption) {

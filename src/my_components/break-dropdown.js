@@ -1,15 +1,11 @@
 import React, {useEffect, useState} from 'react';
 
 const audioOptions = [
-    { label: 'Jazz', value: 'tq32Q5cKhkQ' },
-    { label: 'Classical', value: 'fLoWzp8gRK4' },
-    { label: 'Epic Gaming', value: 'nOmx4ePpuRM' },
-    { label: 'Chillstep (dubstep)', value: 'SFompuJSbgQ' },
-    { label: 'Instrumental Pop', value: 'D9yYrHR8XoU' },
-    { label: 'Instrumental K-pop', value: 'zbjAHEwC2U8' },
+    { label: 'Goofy', value: 'KwW18Jf-VpM' },
+    { label: 'Pink', value: 'RqAVff7-VMg' }
 ];
 
-const Dropdown = ({ onOptionSelect, selectedOption }) => {
+const BreakDropdown = ({ onOptionSelect, selectedOption }) => {
 
     console.log("dropdown: " + selectedOption)
 
@@ -31,4 +27,4 @@ const Dropdown = ({ onOptionSelect, selectedOption }) => {
     );
 };
 
-export default Dropdown;
+export default BreakDropdown;

@@ -4,6 +4,13 @@
 
 /* Shared Version */
 
+.hint {
+  font-size: 12px; /* Adjust the font size to your desired size */
+  margin-left: 0; /* Remove any margin to make it flush with surrounding elements */
+  padding: 0; /* Remove any padding to make it flush with surrounding elements */
+  text-align: center;
+}
+
 .stacked {
   display: flex;
   flex-direction: column;
@@ -155,7 +162,7 @@ h1 {
   width: 300px;
   height: 300px;
   border-radius: 90%;
-  background: linear-gradient(315deg, #30384b 0%, #1f2531 100%);
+  background: linear-gradient(315deg, #1f2531 0%, #1f2531 100%);
   /*box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530; - #30384b*/
   cursor: pointer;
 }

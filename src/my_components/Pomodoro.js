@@ -25,13 +25,15 @@ const Pomodoro = () => {
     const [timerOver, setTimerOver] = useState(false)
 
     //Audio Options
-    const [selectedAudio, setSelectedAudio] = useState('tq32Q5cKhkQ');
+    const [selectedWorkAudio, setSelectedWorkAudio] = useState('tq32Q5cKhkQ');
+    const [selectedBreakAudio, setSelectedBreakAudio] = useState('KwW18Jf-VpM');
 
 
     useEffect(() => {
-        console.log("updated-selectedAudio:", selectedAudio);
-        console.log("updated-timerOver:", timerOver);
-    }, [selectedAudio, timerOver]);
+        console.log("Pomodoro :: updated-selectedWorkAudio:", selectedWorkAudio);
+        console.log("Pomodoro :: updated-selectedBreakAudio:", selectedBreakAudio);
+        console.log("Pomodoro :: updated-timerOver:", timerOver);
+    }, [selectedWorkAudio, selectedBreakAudio, timerOver]);
 
 
     useEffect(() => {
@@ -104,7 +106,8 @@ const Pomodoro = () => {
                 setIsActive={setIsActive}
                 buttonText={buttonText}
                 setButtonText={setButtonText}
-                selectedAudio={selectedAudio}
+                selectedWorkAudio={selectedWorkAudio}
+                selectedBreakAudio={selectedBreakAudio}
                 timerOver = {timerOver}
             />
             <Button type="settings" toggleVisibility={toggleSettingsVisibility}/>
@@ -123,9 +126,12 @@ const Pomodoro = () => {
                       closeSettings={toggleSettingsVisibility}
                       setSecondsLeft={setSecondsLeft}
                       timerMode={timerMode}
-                      setSelectedAudio = {setSelectedAudio}
-                      selectedAudio={selectedAudio}
+                      setSelectedWorkAudio = {setSelectedWorkAudio}
+                      selectedWorkAudio={selectedWorkAudio}
+                      setSelectedBreakAudio = {setSelectedBreakAudio}
+                      selectedBreakAudio={selectedBreakAudio}
             />
+
 
         </div>
     );

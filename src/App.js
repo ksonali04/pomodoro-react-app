@@ -23,7 +23,7 @@ function App() {
     return (
         <>
             <TaskOpen onToggleVisibility={handleToggleVisibilityTask}/>
-            <BreakOpen onToggleVisibility={handleToggleVisibilityBreak}/>
+            {/*<BreakOpen onToggleVisibility={handleToggleVisibilityBreak}/>*/}
 
             <div className={` break-content ${isShiftedLeft ? 'shiftedLeft' : ''}`}>
                 <div className={` content ${isShiftedRight ? 'shiftedRight' : ''}`}>

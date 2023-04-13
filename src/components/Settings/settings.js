@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import Button from '../Button/button'
-import Dropdown from "../../my_components/drop-down";
+import WorkDropdown from "../../my_components/work-dropdown";
 import AudioButton from "../../my_components/audio";
+import BreakDropdown from "../../my_components/break-dropdown";
+import BreakInput from "../../my_components/break-input";
 
 const Settings = ({ visible,
                     toggleSettingsVisibility,
@@ -14,8 +16,10 @@ const Settings = ({ visible,
                     closeSettings,
                     setSecondsLeft,
                     timerMode,
-                    setSelectedAudio,
-                    selectedAudio
+                    setSelectedWorkAudio,
+                    selectedWorkAudio,
+                    setSelectedBreakAudio,
+                    selectedBreakAudio
                   }) => {
 
   const colors = {
@@ -98,19 +102,22 @@ const Settings = ({ visible,
 
           <div className="pane__time-settings">
             <h3>Music</h3>
+
             <div action="" className="time-settings__form">
 
               <div className={'stacked'}>
                 <label>work session</label>
-                <Dropdown class="number-input" onOptionSelect={setSelectedAudio} selectedOption={selectedAudio}/>
+                <WorkDropdown class="number-input" onOptionSelect={setSelectedWorkAudio} selectedOption={selectedWorkAudio}/>
               </div>
 
               <div className={'stacked'}>
-                <label>work session</label>
-                <Dropdown class="number-input" onOptionSelect={setSelectedAudio} selectedOption={selectedAudio}/>
+                <label>break session</label>
+                <BreakInput class="number-input" onInputChange={setSelectedBreakAudio} selectedOption={selectedBreakAudio}/>
               </div>
 
             </div>
+
+            <p class="hint"> PS: Add custom music for breaks by pasting youtube url under "break session" at any time! </p>
 
           </div>
 

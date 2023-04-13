@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import MuteToggle from '../MuteToggle/mutetoggle'
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
@@ -14,7 +14,8 @@ const TimerDisplay = ({ timerMode,
                         setIsActive,
                         buttonText,
                         setButtonText,
-                        selectedAudio,
+                        selectedWorkAudio,
+                        selectedBreakAudio,
                         timerOver
                       }) => {
 
@@ -64,6 +65,26 @@ const TimerDisplay = ({ timerMode,
                   ? '12px'
                   : '28px'
 
+  //setting selected audio
+    let selectedAudio = selectedWorkAudio
+
+    if(timerMode !== "pomo"){
+        selectedAudio = selectedBreakAudio
+    } else {
+        selectedAudio = selectedWorkAudio
+    }
+
+    useEffect(() => {
+        if(timerMode !== "pomo"){
+            selectedAudio = selectedBreakAudio
+        } else {
+            selectedAudio = selectedWorkAudio
+        }
+
+        console.log("timerdisplay :: selectedAudio:", selectedBreakAudio);
+
+    }, [selectedWorkAudio, selectedBreakAudio]);
+
   return(
     <div className="timer" onClick={handleClick}>
       <div className="timer__display">
@@ -84,6 +105,7 @@ const TimerDisplay = ({ timerMode,
           
           {/*<MuteToggle volume = {volume}*/}
           {/*            setVolume = {setVolume} />*/}
+
 
 
             <div key={selectedAudio}>

@@ -45,3 +45,29 @@
     margin-left: 300px;
     transition: margin-left 0.3s ease-in-out;
 }
+
+.task-list-item p {
+    margin: 0;
+    white-space: pre-line;
+}
+.task-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.form-row label {
+    margin-bottom: 5px;
+}
+

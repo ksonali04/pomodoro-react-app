@@ -1,8 +1,8 @@
 .left_popup {
     position: fixed;
     top: 0;
-    left: -300px;
-    width: 300px;
+    left: -500px;
+    width: 500px;
     height: 100vh;
     background-color: #1f2531;
     transition: transform 0.3s ease-in-out;
@@ -34,7 +34,7 @@
 }
 
 .task_button.shifted {
-    transform: translateX(300px);
+    transform: translateX(500px);
 }
 
 .content {
@@ -42,6 +42,100 @@
 }
 
 .content.shiftedRight {
-    margin-left: 300px;
+    margin-left: 500px;
     transition: margin-left 0.3s ease-in-out;
 }
+
+/* ------- */
+
+.add_task {
+    background-color: #222; /* Set background color to transparent */
+    color: #fff; /* Set text color to a light color for contrast */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Increase border radius for rounded corners */
+    border: 1px solid #f87070; /* Add a white border */
+    max-width: 400px; /* Set maximum width of the div */
+    margin: 20px auto 0; /* Center the div horizontally */
+    font-size: 12px;
+}
+
+.add_task h2 {
+    font-size: 15px; /* Set font size for the heading */
+    margin-bottom: 20px; /* Add margin at the bottom for spacing */
+    text-align: center;
+}
+
+.add_task .form-row {
+    margin-bottom: 10px; /* Add margin at the bottom for spacing between form rows */
+}
+
+.add_task label {
+    color: white; /* Set color for labels */
+}
+
+.add_task input[type="text"],
+.add_task input[type="number"],
+.add_task textarea {
+    width: 100%; /* Set input and textarea to 100% width */
+    padding: 10px; /* Add padding for input and textarea */
+    margin-top: 5px; /* Add margin at the top for spacing */
+    border: none; /* Remove border */
+    background-color: #444; /* Set background color to a slightly lighter color than the div background */
+    color: #fff; /* Set text color to a light color for contrast */
+}
+
+.add_task button {
+    padding: 10px 20px; /* Add padding for spacing */
+    background-color: #f87070; /* Set background color for the button */
+    color: #fff; /* Set text color for the button */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add cursor pointer for usability */
+    border-radius: 3px; /* Add border radius for rounded corners */
+    display: block; /* Change display property to block to make the button a block-level element */
+    margin: 20px auto 0; /* Add 10px margin to the top */
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.add_task button:hover {
+    background-color: #ff6347; /* Change background color on hover for visual feedback */
+}
+
+/* ----- */
+
+.task-list {
+    background-color: #333; /* Set background color to transparent */
+    color: #fff; /* Set text color to a light color for contrast */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 0px; /* Increase border radius for rounded corners */
+    border: 1px solid #cecbcb; /* Add a white border */
+    max-width: 400px; /* Set maximum width of the div */
+    display: block; /* Change display property to block to make the button a block-level element */
+    margin: 20px auto 0; /* Add 10px margin to the top */
+}
+
+.task-list h2 {
+    font-size: 12px; /* Set font size for the heading */
+    text-align: center;
+}
+
+.task-list p {
+    font-size: 10px;
+    margin-bottom: 10px; /* Add bottom margin to separate paragraphs */
+}
+
+.task-list button {
+    background-color: #fff; /* Set background color of buttons to white */
+    color: #333; /* Set text color of buttons to a dark color that contrasts well with the background */
+    padding: 8px 16px; /* Add padding for spacing */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add pointer cursor on hover */
+    margin-right: 10px; /* Add right margin for spacing between buttons */
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+.task-list button:hover {
+    background-color: #f0f0f0; /* Change background color of buttons on hover */
+}
+

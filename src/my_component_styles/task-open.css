@@ -6,6 +6,7 @@
     height: 100vh;
     background-color: #1f2531;
     transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
 }
 
 .left_popup.visible {
@@ -103,7 +104,7 @@
 
 /* ----- */
 
-.task-list {
+.task-item {
     background-color: #333; /* Set background color to transparent */
     color: #fff; /* Set text color to a light color for contrast */
     padding: 20px; /* Add padding for spacing */
@@ -114,17 +115,17 @@
     margin: 20px auto 0; /* Add 10px margin to the top */
 }
 
-.task-list h2 {
+.task-item h2 {
     font-size: 12px; /* Set font size for the heading */
     text-align: center;
 }
 
-.task-list p {
+.task-item p {
     font-size: 10px;
     margin-bottom: 10px; /* Add bottom margin to separate paragraphs */
 }
 
-.task-list button {
+.task-item button {
     background-color: #fff; /* Set background color of buttons to white */
     color: #333; /* Set text color of buttons to a dark color that contrasts well with the background */
     padding: 8px 16px; /* Add padding for spacing */
@@ -135,7 +136,7 @@
     margin-bottom: 20px;
 }
 
-.task-list button:hover {
+.task-item button:hover {
     background-color: #f0f0f0; /* Change background color of buttons on hover */
 }
 

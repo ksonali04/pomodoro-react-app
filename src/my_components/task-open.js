@@ -50,7 +50,6 @@ function SidePopup(props) {
             startTime: null,
         };
         addTask(task);
-        setIsVisible(false);
     };
 
     //---
@@ -90,7 +89,7 @@ function SidePopup(props) {
                 <div className="task-list">
 
                     {tasks.map((task, index) => (
-                        <div key={index}>
+                        <div className="task-item" key={index}>
                             <h2>{task.name}</h2>
                             <p>{task.desc}</p>
                             <p>Time to complete: {task.time} minutes</p>

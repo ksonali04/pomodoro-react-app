@@ -49,8 +49,13 @@ function SidePopup(props) {
             time,
             startTime: null,
         };
-        addTask(task);
+        const updatedTasks = [task, ...tasks]; // Add the new task at the beginning
+        setTasks(updatedTasks); // Assuming you are using useState to manage tasks state
+        document.getElementById("task-name").value = '';
+        document.getElementById("task-desc").value = '';
+        document.getElementById("task-time").value = '';
     };
+
 
     //---
 

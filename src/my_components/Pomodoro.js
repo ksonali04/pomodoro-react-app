@@ -11,7 +11,7 @@ import timesUpSfx from '../sounds/timesUp.mp3';
 const Pomodoro = () => {
     const [settingsVisible, setSettingsVisible] = useState(false)
     const [timerMode, setTimerMode] = useState('pomo')   // options: pomo, short, long
-    const [pomoLength, setPomoLength] = useState(0.5)
+    const [pomoLength, setPomoLength] = useState(25)
     const [shortLength, setShortLength] = useState(5)
     const [longLength, setLongLength] = useState(15)
     const [fontPref, setFontPref] = useState('kumbh')         // options: kumbh, roboto, space

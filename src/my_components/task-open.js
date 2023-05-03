@@ -115,7 +115,7 @@ function SidePopup(props) {
 
     return (
         <>
-            <button className={"task_button" + (isVisible ? " shifted" : "")} onClick={toggleVisibility}>Task Manager
+            <button className={"task_button" + (isVisible ? " shifted" : "")} onClick={toggleVisibility}>task manager
             </button>
             {/*<button className="task_button task_history" onClick={toggleVisibility}>Task History</button>*/}
             <div className={`left_popup ${isVisible ? 'visible' : ''}`}>

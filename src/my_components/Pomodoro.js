@@ -86,7 +86,7 @@ const Pomodoro = () => {
         <div className={`pomodoro-app`}>
 
 
-            <Header title="Pomodoro Playlist"/>
+            <Header title="pomodoro playlist"/>
             <Controls
                 timerMode={timerMode}
                 setTimerMode={setTimerMode}
